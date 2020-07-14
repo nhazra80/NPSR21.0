@@ -1,10 +1,327 @@
-<<!DOCTYPE html>
-<html lang="en" dir="ltr">
+
+
+
+<!DOCTYPE html>
+<html >
   <head>
-    <meta charset="utf-8">
-    <title></title>
+    <title>NPS R21.0</title>
+    <link rel = "stylesheet" href = "styles.css"
   </head>
   <body>
-      NPS R21.0 QA Status Report
-  </body>
-</html>
+    <img src = "NPS.png" style="height:1%">
+      <h1 >NPS-S R21.0 QA Status Report(14thJuly2020) </h1>
+      <h2>Summary </h2>
+      <ol>
+        <li> Link Engineering : ICE6 </li>
+        <li> Link Engineering : FMMC6-CHM2T </li>
+        <li> CapacityPlanning : CHM2T </li>
+        <li> DNA TSV Import : CHM2T </li>
+        <li> DNA TSV Import : MXP400 </li>
+      </ol>
+      <h2>Feature wise status</h2>
+        <table>
+          <tr>
+            <th> Feature Name</th>
+            <th> Features Status</th>
+            <th> Total Testcases</th>
+            <th> Executed TestCases</th>
+            <th> Automated </th>
+            <th> ManuallyExecuted</th>
+            <th> Failed TestCases</th>
+            <th> Execution Pending</th>
+            <th> Automation Pending</th>
+            <th> CR Created</th>
+            <th> CR Resolved</th>
+            <th> CR Open</th>
+            <th> MustFix Open</th>
+          </tr>
+        <tr>
+          <td>Link Engg:ICE6</td>
+          <td>TP writting in-progress</td>
+          <td>250</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>LinkEngg:CHM2T-FMMC6</td>
+          <td>TP writting in-progress</td>
+          <td>250</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>CapacityPlanning:CHM2T</td>
+          <td>TP writting in-progress</td>
+          <td>250</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>TSV Import:MXP400</td>
+          <td>TP writting in-progress</td>
+          <td>250</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>TSV Import:CHM2T</td>
+          <td>TP writting in-progress</td>
+          <td>250</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>TSV Import:PassBandEdit</td>
+          <td>TP writting in-progress</td>
+          <td>250</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>TSV Import:Transferable IB Lic</td>
+          <td>TP writting in-progress</td>
+          <td>250</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>Total</td>
+          <td>TP writting in-progress</td>
+          <td>250</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>1</td>
+        </tr>
+
+      </table>
+
+
+      <h2>TestCase Execution trend</h2>
+      <head>
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript">
+          google.charts.load('current', {'packages':['corechart']});
+          google.charts.setOnLoadCallback(drawChart);
+
+          function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+              ['Week', 'Planned', 'Actual'],
+              ['Week10',  100,      50],
+              ['Week11',  200,      100],
+              ['Week12',  350,       200],
+              ['Week13',  450,      0]
+            ]);
+
+            var options = {
+              title: 'TestCase Execution Trend',
+              curveType: 'function',
+              legend: { position: 'bottom' }
+            };
+
+            var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+            chart.draw(data, options);
+          }
+        </script>
+      </head>
+      <body>
+        <div id="curve_chart" style="width: 900px; height: 500px"></div>
+      </body>
+
+
+            <h2>CLI Failures</h2>
+            <head>
+              <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+              <script type="text/javascript">
+                google.charts.load('current', {'packages':['corechart']});
+                google.charts.setOnLoadCallback(drawChart);
+
+                function drawChart() {
+                  var data = google.visualization.arrayToDataTable([
+                    ['Build', 'Total', 'Failed'],
+                    ['1429',  10800,      50],
+                    ['1440',  10800,      100],
+                    ['1446',  10900,       0],
+                    ['1453',  10800,      40]
+                  ]);
+
+                  var options = {
+                    title: 'TestCase Execution Trend',
+                    curveType: 'function',
+                    legend: { position: 'bottom' }
+                  };
+
+                  var chart = new google.visualization.LineChart(document.getElementById('curve_chart1'));
+
+                  chart.draw(data, options);
+                }
+              </script>
+            </head>
+            <body>
+              <div id="curve_chart1" style="width: 900px; height: 500px"></div>
+            </body>
+
+
+
+
+
+            <h2>Issue Created vs Resolved</h2>
+            <head>
+              <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+              <script type="text/javascript">
+                google.charts.load('current', {'packages':['corechart']});
+                google.charts.setOnLoadCallback(drawChart);
+
+                function drawChart() {
+                  var data = google.visualization.arrayToDataTable([
+                    ['Week', 'TotalCreated', 'TotalResolved'],
+                    ['Week10',  10800,      50],
+                    ['Week11',  10800,      100],
+                    ['Week12',  10900,       0],
+                    ['Week13',  10800,      40]
+                  ]);
+
+                  var options = {
+                    title: 'Issue Created vs Resolved',
+                    curveType: 'function',
+                    legend: { position: 'bottom' }
+                  };
+
+                  var chart = new google.visualization.LineChart(document.getElementById('curve_chart2'));
+
+                  chart.draw(data, options);
+                }
+              </script>
+            </head>
+            <body>
+              <div id="curve_chart2" style="width: 900px; height: 500px"></div>
+            </body>
+
+
+      <h2>New Issue Finding trend </h2>
+      <head>
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript">
+          google.charts.load('current', {'packages':['bar']});
+          google.charts.setOnLoadCallback(drawChart);
+
+          function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+            ['Week', 'sev-1/2', 'sev-3/4', 'Total'],
+            ['Week10', 30, 10, 40],
+            ['Week11', 60, 20, 80],
+            ['Week13', 70, 5, 75],
+            ['Week14', 23, 23, 46]
+            ]);
+
+            var options = {
+              chart: {
+                title: 'New Issue Trend',
+                subtitle: 'sev-1/2,sev-3/4,Total',
+              }
+            };
+
+            var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+
+            chart.draw(data, google.charts.Bar.convertOptions(options));
+          }
+        </script>
+      </head>
+      <body>
+        <div id="columnchart_material" style="width: 800px; height: 500px;"></div>
+      </body>
+
+      <h2>Optical Engine Testing Status</h2>
+      <ol>
+        <li> Link Engineering : ICE6 </li>
+        <li> Link Engineering : FMMC6-CHM2T </li>
+        <li> CapacityPlanning : CHM2T </li>
+        <li> DNA TSV Import : CHM2T </li>
+        <li> DNA TSV Import : MXP400 </li>
+      </ol>
+      <h2>Customer TSV Testing status</h2>
+      <ul>
+        <li> Link Engineering : ICE6 </li>
+        <li> Link Engineering : FMMC6-CHM2T </li>
+        <li> CapacityPlanning : CHM2T </li>
+        <li> DNA TSV Import : CHM2T </li>
+        <li> DNA TSV Import : MXP400 </li>
+      </ul>
+
+
+      <h2>Other Task Status</h2>
+          <ol>
+            <li> Link Engineering : ICE6 </li>
+            <li> Link Engineering : FMMC6-CHM2T </li>
+            <li> CapacityPlanning : CHM2T </li>
+            <li> DNA TSV Import : CHM2T </li>
+            <li> DNA TSV Import : MXP400 </li>
+          </ol>
+          <form>
+            <input type = "text" placeholder = "Full Name" name = "name">
+            <button> Submit </button>
+          </body>
+          </html>
